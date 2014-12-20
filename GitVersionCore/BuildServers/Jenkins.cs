@@ -13,7 +13,7 @@
 
         public override bool CanApplyToCurrentContext()
         {
-            return !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("TEAMCITY_VERSION"));
+            return !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("JENKINS_HOME"));
         }
 
         public override void PerformPreProcessingSteps(string gitDirectory)
