@@ -13,7 +13,9 @@
 
         public override bool CanApplyToCurrentContext()
         {
-            return !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("JENKINS_HOME"));
+            //return !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("JENKINS_HOME"));
+            Console.WriteLine("Testing if we're running on Jenkins");
+            return true;
         }
 
         public override void PerformPreProcessingSteps(string gitDirectory)
